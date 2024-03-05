@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Our superheroes</title>
+  </head>
+
+  <body>
+
+<header>
+
+</header>
+
+<section>
+
+</section>
+
+
+<script>
+
+  fetch('https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json').then((response) => response.json())
+  .then((data) => displayCatInfo(data))
+
+  let motherInfo = 'The mother cats are called ';
+  let kittenInfo = '';
+    
+   
+  function displayCatInfo(catJson) {
+  
+    let motherName = '';
+    let count = 0;
+    //console.log('catJson: ', catJson)
+    for (let i of catJson) {
+      count++;      
+      let kittenArr = i['kittens'];
+      motherName = i['name'];
+
+      if (count === catJson.length) {
+        motherInfo += `and ${i["name"]}.`
+      } else {      
+        motherInfo += `${i["name"]}, `
+      }      
+
+      let total = 0;
+      let male = 0;
+      let female = 0;
+
+      for (let j of kittenArr) {
+        total = kittenArr.length
+        j['gender'] === 'm' ? male += 1 : female += 1
+      }
+
+      kittenInfo = `${motherName} has ${total} kittens. ${female} female, and ${male} male.`   
+      const section = document.querySelector('section');
+      const para = document.createElement('p');
+      para.textContent = kittenInfo;
+      section.appendChild(para);
+      
+      console.log('kittenInfo :', kittenInfo);
+    }
+    console.log('motherInfo: ', motherInfo)
+
+    const header = document.querySelector('header');
+    const title = document.createElement('h1');
+    title.innerText = motherInfo;
+    header.appendChild(title);
+
+
+
+  }
+  
+
+
+
+
+
+</script>
+</body>
+</html>
