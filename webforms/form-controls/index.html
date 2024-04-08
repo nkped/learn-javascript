@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="con">
+    <div class="items">1</div>
+    <div class="items">2</div>
+    <div class="items">3</div>
+</div>
+
+
+
+<form>
+<h2>Edit your favourite preferences</h2>
+<ul>
+    <li>
+    <label for="max-invite">Party people</label>
+    <input type="range" id="max-invite" name="guests" min="1" max="30" step="1" value="2">
+    <output for="max-invite" class="invite-output"></output>
+    </li>
+    <li>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" 
+    placeholder="x@y.z">
+    </li>
+    <li>
+    <label for="website">Website: </label>
+    <input type="url" name="website" id="website">
+    </li>
+    <li>
+    <label for="phone">Phone nr: </label>
+    <input type="tel" name="phone" id="phone">
+    </li>
+    <li>
+    <label for="fav-col">Favourite color: </label>
+    <input type="color" name="fav-col" id="fav-col">
+    </li>
+    <li>
+        <label for="submit-form" ></label>
+    <button  type="submit" id="submit-form" role="submit" >Update preferences</button>
+</li>
+</ul>
+</form>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 5px solid red;
+    height: full;
+}
+
+.items {
+    border: 2px solid yellow;
+}
+
+.con {
+    width: 40%;
+    margin: auto;
+    border: 2px solid blue;
+}
+
+
+ul {
+    list-style-type: none;
+    border: 5px solid pink;
+    padding: 0;
+    width: 60%;
+    margin: auto;
+}
+
+li {
+    background-color: red;
+    width: 90%;
+    margin: auto;
+}
