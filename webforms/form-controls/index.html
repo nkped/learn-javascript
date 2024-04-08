@@ -8,15 +8,47 @@
     <title>Document</title>
 </head>
 <body>
-<div class="con">
-    <div class="items">1</div>
-    <div class="items">2</div>
-    <div class="items">3</div>
-</div>
 
 
 
-<form>
+    <form>
+        <h2>Submit your prefs...</h2>
+        <ul>
+            <li>
+                <label for="guests" >Select number of guests: </label>
+                <input type="range" id="max-invite" name="guests" min="1" max="30" step="1" value="20">
+                <output for="max-invite" class="invite-output"></output>
+            </li>
+        <li>
+            <labels for="email">Enter email: </labels>
+            <input type="email" id="email" name="email" placeholder="a@b.c">
+        </li>
+        <li>
+            <labels for="website">Enter URL: </labels>
+            <input type="url" id="website" name="website-url">
+        </li>
+        <li>
+            <labels for="phone-number">Enter phone number: </labels>
+            <input type="tel" id="phone-number" name="phone-number">
+        </li>
+        <li>
+            <labels for="fav-col" > Choose favorite color: </labels>
+            <input type="color" id="fav-col" name="fav-col">
+        </li>
+        <li>
+            <button>Submit</button>
+        </li>
+    </ul>
+    </form>
+
+    
+</body>
+</html>
+
+
+
+
+<!-- <form>
 <h2>Edit your favourite preferences</h2>
 <ul>
     <li>
@@ -46,7 +78,4 @@
     <button  type="submit" id="submit-form" role="submit" >Update preferences</button>
 </li>
 </ul>
-</form>
-    
-</body>
-</html>
+</form> -->
