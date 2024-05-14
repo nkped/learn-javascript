@@ -1,0 +1,86 @@
+
+
+input[type="radio"] {
+    appearance: none;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: 1px solid red;
+    border-radius: 50px;
+    vertical-align: -7px;
+}
+
+
+input[type="radio"] + span::before {
+    
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background-color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"] {
+
+    appearance: none;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: 1px solid red;
+    vertical-align: -10px;
+
+}
+
+input[type="checkbox"]::before {
+
+    position: absolute;
+    content: "✔";
+    top: 3px;
+    right: 7px;
+    visibility: hidden;
+
+}
+
+input[type="checkbox"]:checked::before {
+
+    visibility: visible;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
