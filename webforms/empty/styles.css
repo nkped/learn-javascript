@@ -1,0 +1,112 @@
+
+
+
+/* Common inputs - incl checkboxes/radios - can be custom-styled by input{position: relative;} along with input::pseudo class{position: absolut}. (Dont forget appearance: none;)
+
+Other inputs, such as selects, datalist appear to NOT have formatting boxes, so must wrap input => div-wrapper {position: relative;}.
+
+If inputs are 100% width, use span element after input to hang pseudo element. Create flex container for input and span to wrap pseudo element onto inputs line => div {flex-flow: row-wrap} */
+
+body {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+
+input {
+    display: block;
+    width: 100%;    
+}
+
+fieldset > div {
+    display: flex;
+    flex-flow: row-wrap;
+}
+
+input + span {
+    position: relative;
+}
+
+input:required + span::after {
+    position: absolute;
+    content: "Required";
+    background-color: brown;
+    color: white;
+    font-size: 1rem;
+    top: -26px;
+    left: -70px;
+}
+
+
+
+
+
+
+
+/* 
+input[type="radio"] {
+    position: relative;
+    appearance: none;
+    height: 2em;
+    width: 2em;
+    border: 2px solid red;
+    border-radius: 50px;
+    vertical-align: -8px;
+}
+
+input[type="radio"]::before {
+    position: absolute;
+    content: "✔";
+    visibility: hidden;
+    font-size: 1.5em;
+    top: -0.1em;
+    left: 0.15em;    
+}
+
+input[type="radio"]:checked::before {
+    visibility: visible;
+}
+
+select {
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    position: absolute;
+    content: "▼";
+    font-size: 1rem;
+    right: 10px;
+    top: 0px
+}
+
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    border: 2px solid red;
+   vertical-align: -8px;
+}
+
+
+input[type="checkbox"]::before {
+    position: absolute;
+    font-size: 2em;
+    content: "✔";
+    visibility: hidden;
+    top: -6px;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+} 
+ */

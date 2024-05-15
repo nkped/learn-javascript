@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer ></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
 
-<form action="">
 
-<p>
-  <label for="foods">Foods: </label>
-  <input type="text" id="foods" list="fruit-list">
-  <datalist id="fruit-list">
-    <option value="banana">banana</option>
-    <option value="">grape</option>
-  </datalist>
-</p>
+  <form action="">
+
+    <fieldset>
+      <legend>Personal info </legend>
+
+      <label for="fname">First name: </label>
+      <div>
+        <input type="text" id="fname" name="fname" required>
+        <span></span>
+      </div>
+    </fieldset>
+    
+<!--  <fieldset>
+    <label>Check me:      
+      <input    type="checkbox">      
+    </label>
+  </fieldset>
+
+    <fieldset>
+      <legend>Choose fruit: </legend>
+    <label>apple:      
+      <input type="radio" name="fruits" value="apple">      
+    </label>
+    <label>banana:      
+      <input type="radio" name="fruits" value="banana">      
+    </label>
+  </fieldset>
+
+  <label for="select">Choose fav candy: </label>
+  <div class="select-wrapper">
+    <select name="candy" id="select">
+      <option value="chokolate">Chocolate</option>
+      <option value="gummies">Gummies</option>
+      <option value="hardcandy">Hard candy</option>
+    </select>
+</div>
+ -->
 
 
 
-</form>
+  </form>
 
 
 </body>
