@@ -37,6 +37,20 @@ input:required + span::after {
     left: -70px;
 }
 
+input:invalid {
+    border: 1px solid red;
+}
+
+input:invalid + span::before {
+    content: "✖";
+    color: red;
+}
+
+input:valid + span::before {
+    content: "✓";
+    color: green;
+}
+
 
 
 
