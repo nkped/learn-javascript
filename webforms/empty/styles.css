@@ -1,19 +1,70 @@
-
-
-
-/* Common inputs - incl checkboxes/radios - can be custom-styled by input{position: relative;} along with input::pseudo class{position: absolut}. (Dont forget appearance: none;)
+/*
+Common inputs - incl checkboxes/radios - can be custom-styled by input{position: relative;} along with input::pseudo class{position: absolut}. (Dont forget appearance: none;)
 
 Other inputs, such as selects, datalist appear to NOT have formatting boxes, so must wrap input => div-wrapper {position: relative;}.
 
-If inputs are 100% width, use span element after input to hang pseudo element. Create flex container for input and span to wrap pseudo element onto inputs line => div {flex-flow: row-wrap} */
+If inputs are 100% width, use span element after input to hang pseudo element. Create flex container for input and span to wrap pseudo element onto inputs line => div {flex-flow: row-wrap}
+*/
+
 
 body {
     max-width: 400px;
     margin: 20px auto;
 }
 
+fieldset > div {
+    display: flex;
+    flex-flow: row-wrap;
+}
 
 input {
+    display: block;
+    width: 100%;
+}
+
+input[type="number"] + span {
+    position: relative;
+}
+
+input[type="number"] + span::after {
+    position: absolute;
+    padding: 1px;
+}
+
+
+input:required + span::before {
+    position: absolute;
+    content: "required";
+    background-color: brown;
+    color: white;
+    font-size: 0.8rem;
+    padding: 1px;
+    top: -20px;
+    right: 0px;
+}
+
+
+input[type="number"]:out-of-range + span::after {
+    content: "✖";
+    color: red;
+}
+
+input[type="number"]:out-of-range {
+    border: 1px solid red;
+}
+ 
+
+input[type="number"]:in-range + span::after {
+    content: "✓";
+    border: 1px solid green;
+}
+
+
+
+
+
+
+/* input {
     display: block;
     width: 100%;    
 }
@@ -49,13 +100,8 @@ input:invalid + span::before {
 input:valid + span::before {
     content: "✓";
     color: green;
-}
-
-
-
-
-
-
+} 
+ */
 
 /* 
 input[type="radio"] {
